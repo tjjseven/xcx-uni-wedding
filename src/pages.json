@@ -1,16 +1,54 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages、
+		{
+			"path": "pages/com/com",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "index",
+				"usingComponents": {
+					"swiper": "/wxcomponents/swiper/swiper"
+				}
+			}
+		},
+		{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "about",
+				"usingComponents": {
+					"timeline": "/wxcomponents/timeline/timeline"
+				}
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"custom": true,
+		"color": "#000000",
+		"selectedColor": "#000000",
+		"backgroundColor": "#000000",
+		"list": [{
+			"pagePath": "pages/com/com",
+			"text": "公共"
+		},{
+			"pagePath": "pages/index/index",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/about/about",
+			"text": "关于"
+		}]
+	},
+	"usingComponents": {
+
 	}
 }
