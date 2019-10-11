@@ -9,7 +9,7 @@
   </view>
   <view class="action" bindtap="NavChange" data-cur="about">
     <view class='cuIcon-cu-image'>
-      <image src="/static/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+      <image src="/static/images/tabbar/gif.{{PageCur=='about'?'jpg':'gif'}}"></image>
     </view>
     <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
   </view>

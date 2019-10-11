@@ -20,8 +20,8 @@
                 backText: 'back',
                 content: '中间',
                 title: 'Hello',
-                bgImage: '',
-                // bgImage: require('@/assets/logo.png')
+                // bgImage: '',
+                bgImage: require('@/static/images/wave.gif'),
                 PageCur: ''
             }
         },
@@ -33,7 +33,7 @@
             // console.log(this.$store.state.PageCur)
             // console.log(this.$mp.page.getTabBar().data.PageCur)
             this.PageCur =  wx.getStorageSync('pageCur') || this.$mp.page.getTabBar().data.PageCur
-            console.log(this.PageCur)
+            // console.log(this.PageCur)
         },
         watch: {
             PageCur: {
