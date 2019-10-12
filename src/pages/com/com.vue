@@ -11,8 +11,8 @@
 </template>
 
 <script>
-    import Index from '@/pages/index/index'
-    import About from '@/pages/about/about'
+    // import Index from '@/pages/index/index'
+    // import About from '@/pages/about/about'
     export default {
         name: "com",
         data () {
@@ -26,8 +26,8 @@
             }
         },
         components:{
-            Index,
-            About
+            // Index,
+            // About
         },
         mounted ()  {
             // console.log(this.$store.state.PageCur)

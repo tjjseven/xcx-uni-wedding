@@ -1,16 +1,23 @@
 <index wx:if="{{PageCur=='index'}}"></index>
+<info wx:if="{{PageCur=='info'}}"></info>
 <about wx:if="{{PageCur=='about'}}"></about>
 <view class="cu-bar tabbar bg-white shadow foot">
-  <view class="action" bindtap="NavChange" data-cur="index">
-    <view class='cuIcon-cu-image'>
-      <image src="/static/images/tabbar/index{{PageCur=='index'?'_cur':''}}.png"></image>
+    <view class="action" bindtap="NavChange" data-cur="index">
+        <view class='cuIcon-cu-image'>
+            <image src="/static/images/tabbar/index{{PageCur=='index'?'_cur':''}}.png"></image>
+        </view>
+        <view class="{{PageCur=='index'?'text-green':'text-gray'}}">首页</view>
     </view>
-    <view class="{{PageCur=='index'?'text-green':'text-gray'}}">首页</view>
-  </view>
-  <view class="action" bindtap="NavChange" data-cur="about">
-    <view class='cuIcon-cu-image'>
-      <image src="/static/images/tabbar/gif.{{PageCur=='about'?'jpg':'gif'}}"></image>
+    <view class="action" bindtap="NavChange" data-cur="info">
+        <view class='cuIcon-cu-image'>
+            <image src="/static/images/tabbar/index{{PageCur=='info'?'_cur':''}}.png"></image>
+        </view>
+        <view class="{{PageCur=='info'?'text-green':'text-gray'}}">信息</view>
     </view>
-    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
-  </view>
+    <view class="action" bindtap="NavChange" data-cur="about">
+        <view class='cuIcon-cu-image'>
+            <image src="/static/images/tabbar/gif.{{PageCur=='about'?'gif':'gif'}}"></image>
+        </view>
+        <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+    </view>
 </view>

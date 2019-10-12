@@ -11,7 +11,7 @@
 	export default {
 		data() {
 			return {
-                pathData:'https://labs.nearpod.com/bodymovin/demo/al_boardman/articulation/rejection.json'
+                pathData:'https://labs.nearpod.com/bodymovin/demo/al_boardman/articulation/estimate.json'
 			}
 		},
 		mounted() {
@@ -44,7 +44,7 @@
                 const context = canvas.getContext('2d')
                 lottie.setup(canvas)
                 lottie.loadAnimation({
-                    loop: false,
+                    loop: true,
                     autoplay: true,
                     rendererSettings: {
                         context

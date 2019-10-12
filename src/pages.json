@@ -16,6 +16,15 @@
 			}
 		},
 		{
+			"path": "pages/info/info",
+			"style": {
+				"navigationBarTitleText": "info",
+				"usingComponents": {
+
+				}
+			}
+		},
+		{
 			"path": "pages/about/about",
 			"style": {
 				"navigationBarTitleText": "about",
