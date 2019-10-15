@@ -16,7 +16,8 @@
     </view>
     <view class="action" bindtap="NavChange" data-cur="about">
         <view class='cuIcon-cu-image'>
-            <image src="/static/images/tabbar/gif.{{PageCur=='about'?'gif':'gif'}}"></image>
+            <!--<image src="/static/images/tabbar/gif.{{PageCur=='about'?'gif':'gif'}}"></image>-->
+            <image src="https://7473-ts-007-1258546774.tcb.qcloud.la/gif.gif?sign=217d9340471f113326e75426e94908bb&t=1571031110" ></image>
         </view>
         <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
     </view>

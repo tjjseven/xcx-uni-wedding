@@ -20,8 +20,9 @@
                 backText: 'back',
                 content: '中间',
                 title: 'Hello',
+                bgImage: 'https://7473-ts-007-1258546774.tcb.qcloud.la/wave.gif?sign=1093f2b406a63c81959840324ac42ccc&t=1571030338',
+                // bgImage: require('@/static/images/wave.gif'),
                 // bgImage: '',
-                bgImage: require('@/static/images/wave.gif'),
                 PageCur: ''
             }
         },

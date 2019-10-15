@@ -34,6 +34,13 @@
 			}
 		}
 	],
+	"subpackages": [
+		{
+			"root": "package",
+			"name": "pack",
+			"pages": []
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
@@ -49,12 +56,10 @@
 		"list": [{
 			"pagePath": "pages/com/com",
 			"text": "公共"
-		},{
-			"pagePath": "pages/index/index",
-			"text": "首页"
-		}, {
-			"pagePath": "pages/about/about",
-			"text": "关于"
+		},
+		{
+			"pagePath": "pages/info/info",
+			"text": "信息"
 		}]
 	},
 	"usingComponents": {

@@ -7,7 +7,7 @@
 
 <script>
     // import lottie from 'lottie-web'
-    import lottie from 'lottie-miniprogram'
+    // import lottie from 'lottie-miniprogram'
 	export default {
 		data() {
 			return {
@@ -15,6 +15,7 @@
 			}
 		},
 		mounted() {
+		    return
             // console.log(uni.createSelectorQuery().selectAll('#lottie'))
             // console.log(wx.createSelectorQuery().select('#lottie'))
             const query = uni.createSelectorQuery().in(this).select('#lottie');
@@ -56,13 +57,7 @@
 
             // console.log(uni.createCanvasContext('lottie'))
 
-            // uni.login({//登陆接口
-            //     provider:'weixin',
-            //     scopes:'auth_base',
-            //     timeout:20000,
-            // }).then(data=> {//返回一系列登陆信息
-            //     console.log(data)
-            // })
+
 
 
 		},
