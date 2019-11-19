@@ -58,12 +58,9 @@
                                 console.log(123)
                                 wx.showModal({
                                     title: '授权失败提示',
-                                    content: '罗雪是只猪',
-                                    confirmText: '是的',
-                                    cancelText: '是的',
-                                    // content: '如需要授权您的位置，请打开设置',
-                                    // confirmText: '需要',
-                                    // cancelText: '不需要',
+                                    content: '如需要授权您的位置，请打开设置',
+                                    confirmText: '需要',
+                                    cancelText: '不需要',
                                     success (res) {
                                         if (res.confirm) {
                                             console.log('用户点击确定')
