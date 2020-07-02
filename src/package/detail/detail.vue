@@ -23,6 +23,7 @@
             }
         },
         mounted() {
+            console.log(this.$root.$mp)
             return
             // console.log(uni.createSelectorQuery().selectAll('#lottie'))
             // console.log(wx.createSelectorQuery().select('#lottie'))

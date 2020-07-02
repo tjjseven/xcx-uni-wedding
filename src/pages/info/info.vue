@@ -7,6 +7,8 @@
         <!--<img :src="headerImg" alt="">-->
         <open-data type="userNickName" lang="zh_CN"></open-data>
         <open-data type="userGender" lang="zh_CN"></open-data>
+        <navigator url="/package/detail/detail?id=1" style="padding: 20px 0">canvas跳转</navigator>
+        <button @click="scanQrcode">扫一扫</button>
         <button @click="autoLocation">获取地址</button>
         <button @click="createCamera">拍照</button>
         <button @click="imgSrc = ''">重拍</button>
@@ -14,7 +16,7 @@
         <img :src="imgSrc" alt="" style="width: 100%; height: 300px;" v-if="imgSrc">
         <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;" v-if="!imgSrc"></camera>
 
-        <navigator url="/package/detail/detail">canvas</navigator>
+
     </div>
 </template>
 
@@ -41,12 +43,25 @@
             //     console.log(data)
             // })
 
-
+            // console.log(this.$root.$mp)
+            return
+            wx.showModal({
+                title: '提示',
+                content: JSON.stringify(1),
+                showCancel: false,
+                success (res) {
+                    if (res.confirm) {
+                        console.log('用户点击确定')
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
+                }
+            })
             // this.getSystemInfo()
             // this.getSetting('location')
-            this.autoLocation()
+            // this.autoLocation()
 
-            this.cameraContext = wx.createCameraContext()
+            // this.cameraContext = wx.createCameraContext()
         },
         methods: {
             /*按钮打开微信设置*/
@@ -221,6 +236,7 @@
                     }
                 })
             },
+            /*拍照*/
             createCamera () {
                 wx.authorize({ // 提前发起授权请求 用户信息除外
                     scope: 'scope.camera',
@@ -269,6 +285,26 @@
                 })
 
 
+            },
+            /*扫码*/
+            scanQrcode () {
+                wx.scanCode({
+                    success (res) {
+                        console.log(res)
+                        wx.showModal({
+                            title: '提示',
+                            content: JSON.stringify(res),
+                            showCancel: false,
+                            success (res) {
+                                if (res.confirm) {
+                                    console.log('用户点击确定')
+                                } else if (res.cancel) {
+                                    console.log('用户点击取消')
+                                }
+                            }
+                        })
+                    }
+                })
             },
             onload1 () {
                 const pages = getCurrentPages()

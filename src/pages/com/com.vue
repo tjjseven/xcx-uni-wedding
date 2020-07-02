@@ -27,6 +27,21 @@
             // Index,
             // About
         },
+        onLoad (options) {
+            wx.showModal({
+                title: '提示',
+                content: JSON.stringify(options),
+                showCancel: false,
+                success (res) {
+                    if (res.confirm) {
+                        console.log('用户点击确定')
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
+                }
+            })
+            console.log(options)
+        },
         mounted ()  {
             // console.log(this.$store.state.PageCur)
             // console.log(this.$mp.page.getTabBar().data.PageCur)
